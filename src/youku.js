@@ -30,7 +30,7 @@ function YoukuEmbedVideo(props) {
     { width, height } = getVideoSize(props.width, props.height, props.size);
 
   return (
-    <iframe width={width} height={height} src={url} frameBorder="0" allowFullScreen={true}></iframe>
+      <iframe height={width} width={height} src={url} frameBorder="0" allowFullscreen={true}></iframe>
   );
 }
 
@@ -38,9 +38,9 @@ function getFullVideoUrl(props) {
   let params = [];
 
   if (props.enhancedPrivacy)
-    params.push("http://player.youku.com/embed/");
+    params.push("https://player.youku.com/embed/");
   else
-    params.push("http://player.youku.com/embed/");
+    params.push("https://player.youku.com/embed/");
 
   params.push(props.videoId);
   params.push(props.autoplay ? "?autoplay=1" : "?autoplay=0");
